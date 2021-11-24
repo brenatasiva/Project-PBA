@@ -59,6 +59,11 @@
     <Compile Include="Assets\Scripts\camera.cs" />
     <Compile Include="Assets\Scripts\ball.cs" />
     <Compile Include="Assets\Scripts\rotate.cs" />
+    <Compile Include="Assets\Scripts\Target.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\ItemGenerator.cs" />
+    <Compile Include="Assets\Scripts\Restart.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
