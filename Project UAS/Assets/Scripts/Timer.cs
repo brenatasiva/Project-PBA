@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public TMP_Text textTime;
-    public TMP_InputField btnRestart;
+    public TMP_Text textCollected;
     float timer;
     bool startGame = false;
     int collectedItem;
@@ -16,19 +16,27 @@ public class Timer : MonoBehaviour
     {
         timer = 60;
         startGame = true;
-        collectedItem = 0;
+        collectedItem = int.Parse(textCollected.text);
     }
 
     // Update is called once per frame
     void Update()
     {
+        collectedItem = int.Parse(textCollected.text);
         if (startGame)
         {
             if (timer > 0)
             {
-                timer -= Time.deltaTime;
-                float timerRound = Mathf.Floor(timer);  
-                textTime.text = "Sisa waktu : " + timerRound.ToString();
+                if(collectedItem > 0)
+                {
+                    timer -= Time.deltaTime;
+                    float timerRound = Mathf.Floor(timer);
+                    textTime.text = "Sisa waktu : " + timerRound.ToString();
+                }
+                else
+                {
+
+                }
             }
             else
             {

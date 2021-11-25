@@ -21,7 +21,12 @@ public class ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(rb.velocity.magnitude <= speedLimit)
+        
+    }
+
+    private void FixedUpdate()
+    {
+        if (rb.velocity.magnitude <= speedLimit)
         {
             float forwardInput = Input.GetAxis("Vertical");
             rb.AddForce(Vector3.forward * forwardInput * speed);
