@@ -35,7 +35,7 @@ public class Timer : MonoBehaviour
                 }
                 else
                 {
-
+                    SceneManager.LoadScene("Level2");
                 }
             }
             else
