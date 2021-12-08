@@ -5,7 +5,7 @@ using UnityEngine;
 public class PressurePlate : MonoBehaviour
 {
     public GameObject pusher;
-    private bool dirRight = true;
+    private bool dirRight = false;
     private bool stop = true;
     private float speed = 0.0f;
 
@@ -25,7 +25,7 @@ public class PressurePlate : MonoBehaviour
                 pusher.transform.Translate(-Vector2.right * speed * Time.deltaTime);
             }
 
-            if (pusher.transform.position.x >= 40)
+            if (pusher.transform.position.x >= 41)
             {
                 dirRight = false;
             }
@@ -37,10 +37,15 @@ public class PressurePlate : MonoBehaviour
         }
         else
         {
-            if (pusher.transform.position.x <= 40)
+            if (pusher.transform.position.x <= 39)
             {
                 speed = 2.0f;
                 pusher.transform.Translate(Vector2.right * speed * Time.deltaTime);
+            }
+            else if (pusher.transform.position.x >= 39.1)
+            {
+                speed = 2.0f;
+                pusher.transform.Translate(-Vector2.right * speed * Time.deltaTime);
             }
         }
     }

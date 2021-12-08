@@ -738,6 +738,7 @@ GameObject:
   - component: {fileID: 493776184}
   - component: {fileID: 493776183}
   - component: {fileID: 493776182}
+  - component: {fileID: 493776186}
   m_Layer: 0
   m_Name: Pusher
   m_TagString: Untagged
@@ -822,6 +823,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &493776186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493776181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ee8cfb73b4692478e724a3081fab60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pusher: {fileID: 493776181}
+  ball: {fileID: 1851038901}
+  thrust: 5
 --- !u!1 &557912472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,7 +1256,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1279181382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dc6947531933844da392311ba803fe0, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fe75caa67bdf654fbaaa65164eecf51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1279181385
@@ -1426,8 +1442,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353816723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43, y: 0, z: -32}
-  m_LocalScale: {x: 15, y: 1, z: 20}
+  m_LocalPosition: {x: 45.2128, y: 0, z: -32}
+  m_LocalScale: {x: 10.575, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
