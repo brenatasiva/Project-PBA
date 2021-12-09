@@ -11,18 +11,21 @@ public class ItemGenerator : MonoBehaviour
     public GameObject ground2;
     public GameObject ground3;
     public GameObject ground4;
+    public GameObject ground5;
     public TMP_Text itemCountText;
     int itemCount = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i <= 3; i++)
+        for (int i = 0; i <= 4; i++)
         {
             if (i == 0) ground = ground1;
             if (i == 1) ground = ground2;
             if (i == 2) ground = ground3;
             if (i == 3) ground = ground4;
+            if (i == 4) ground = ground5;
+
             float moveAreaX = ground.GetComponent<Renderer>().bounds.size.x / 2;
             float moveAreaZ = ground.GetComponent<Renderer>().bounds.size.z / 2;
             float Y = ground.transform.position.y;

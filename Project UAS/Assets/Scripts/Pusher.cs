@@ -6,7 +6,7 @@ public class Pusher : MonoBehaviour
 {
     public GameObject pusher;
     public Rigidbody ball;
-    public float thrust = 5.0f;
+    public float pushForce;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,7 @@ public class Pusher : MonoBehaviour
     {
         if (collision.gameObject.name == "Ball")
         {
-            ball.AddForce(transform.right*25, ForceMode.Impulse);
+            ball.AddForce(Vector3.right*pushForce, ForceMode.Impulse);
         }
     }
 
