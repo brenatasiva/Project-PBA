@@ -31,8 +31,5 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-
-    }
+    
 }
