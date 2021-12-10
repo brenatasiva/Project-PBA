@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ball : MonoBehaviour
 {
@@ -33,6 +34,10 @@ public class ball : MonoBehaviour
 
             float sideInput = Input.GetAxis("Horizontal");
             rb.AddForce(Vector3.right * sideInput * speed);
+        }
+        if(rb.transform.position.y < -5)
+        {
+            SceneManager.LoadScene("Game Over");
         }
     }
 

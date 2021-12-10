@@ -5,8 +5,9 @@ using UnityEngine;
 public class Finish : MonoBehaviour
 {
     public ParticleSystem confetti;
-    GameObject ball;
+    public Rigidbody ball;
     bool finish = true;
+    public GameObject textCong;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,8 @@ public class Finish : MonoBehaviour
         {
             if (finish == true)
             {
+                textCong.SetActive(true);
+                ball.isKinematic = true;
                 confetti.Play();
             }
         }
