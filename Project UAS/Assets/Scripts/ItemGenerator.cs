@@ -32,7 +32,7 @@ public class ItemGenerator : MonoBehaviour
             float thirdZ = ground.GetComponent<Renderer>().bounds.size.z / 3;
             Vector3 center = ground.GetComponent<Renderer>().bounds.center;
 
-            for (int j = 0; j < 2; j++)
+            for (int j = 0; j < 3; j++)
             {
                 Instantiate(item, new Vector3(center.x + Random.Range(-moveAreaX, moveAreaX), Y + 1.1f, center.z + Random.Range(-moveAreaZ + j * thirdZ, -moveAreaZ + (j + 1) * thirdZ)), Quaternion.identity);
                 itemCount++;

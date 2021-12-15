@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Finish : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Finish : MonoBehaviour
     public Rigidbody ball;
     bool finish = true;
     public GameObject textCong;
+    public GameObject textTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class Finish : MonoBehaviour
         {
             if (finish == true)
             {
+                textTime.SetActive(false);
                 textCong.SetActive(true);
                 ball.isKinematic = true;
                 confetti.Play();

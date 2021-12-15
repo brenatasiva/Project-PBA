@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = 60;
+        timer = 90;
         startGame = true;
         collectedItem = int.Parse(textCollected.text);
     }
@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
                 {
                     timer -= Time.deltaTime;
                     float timerRound = Mathf.Floor(timer);
-                    textTime.text = "Sisa waktu : " + timerRound.ToString();
+                    textTime.text = "Times Left : " + timerRound.ToString();
                 }
                 else
                 {
@@ -41,7 +41,7 @@ public class Timer : MonoBehaviour
             else
             {
                 timer = 0;
-                textTime.text = "Waktu HABIS!";
+                textTime.text = "Time End!";
                 startGame = false;
             }            
         }
